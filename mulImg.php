@@ -93,22 +93,33 @@ if(isset($_POST['submit']))
             padding: 5px 10px;
             cursor: pointer;
         }
+        #submit {
+    background-color: #007bff; /* Blue background color */
+    color: #fff; /* White text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Padding around the button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+#submit:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
     </style>
 <body>
 <form name="add_name" id="add_name" method="post" enctype="multipart/form-data">
-<div class="table-responsive">
-<table class="table table-bordered" id="dynamic_field">
-<tr>
-<td><input type="text" name="name[]" placeholder="Enter your Name" class="form-control name_list" /></td>
-<td><input type="file" name="image[]" class="form-control" accept="image/*"></td>
-<td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>
-</tr>
-</table>
-
-<input type="submit" name="submit" id="submit" class="btn btn-info" value="Submit" />
-</div>
-
+    <div class="table-responsive">
+        <table class="table table-bordered" id="dynamic_field">
+            <tr>
+                <td><input type="text" name="name[]" placeholder="Enter your Name" class="form-control name_list" /></td>
+                <td><input type="file" name="image[]" class="form-control" accept="image/*"></td>
+                <td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>
+                <td><input type="submit" name="submit" id="submit" class="btn btn-info" value="Submit" /></td>
+            </tr>
+        </table>
+    </div>
 </form>
+
 </body>
 <script>
 $(document).ready(function(){
